@@ -1,0 +1,167 @@
+GIT
+1. To get version
+open CMD
+cd Desktop press enter
+git --version press enter
+2. To get help
+git --help
+3. to cofig git username
+git config --system user. coladimeji
+4. to confing email
+git config --system user.coladimeji@gmail.com
+
+5. To config the command line clouring
+git config --global colour.ui auto
+
+6. to list  all
+git config -l
+7. to edit
+git config -e
+NOTE 
+A git repository contains a collection of iles of various differnt version of a project
+8. To create a folder from terminal
+C:\Users\chris\Desktop>mkdir training_repo
+9. to do to the new folder
+C:\Users\chris\Desktop>cd training_repo
+10.to initailize the folder to make it create versions to make it Github repository as soon as yo initialize, anything you add in the folder will be tracked by GIT
+C:\Users\chris\Desktop\training_repo>git init
+11. type git commit to sse if you are in the git repository
+12 Now go to Git and create additional folder inside the  training_repo folder
+13. add all the file you want to commit from the staging area
+C:\Users\chris\Desktop\training_repo>git add readme.md
+14. now check status of what you did
+C:\Users\chris\Desktop\training_repo>git status
+NOTE: this will show on  master Branch no commit yet
+new file: readme.md
+what this mean is that its ready to be committed
+15. to commit
+C:\Users\chris\Desktop\training_repo>git commit -m "added read me.md"
+NOTE: -m stands for message and "" you put the changes you made it should not be more that 50 characters long describing what you change so that other people can understand the changes made. In this case i added read me.md
+click enter
+[master (root-commit) a7d889a] added read me.md
+ 1 file changed, 1 insertion(+)
+ create mode 100644 readme.md
+Now the commited  of the file is completed
+16. C:\Users\chris\Desktop\training_repo>git status
+On branch master
+nothing to commit, working tree clean
+That is as easy as it is to make a change to the repository.
+17. Make a change to the GIT folder
+open GIT folder readme.md and type other things there. make sure you save the file in GIT  then come back to terminal
+check status 
+18. add file after changes
+C:\Users\chris\Desktop\training_repo>git add readme.md
+or
+C:\Users\chris\Desktop\training_repo>git add .
+what this does is it will add all files 
+19. now get status to see if it was added
+
+C:\Users\chris\Desktop\training_repo>git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   readme.md
+20. now commit
+C:\Users\chris\Desktop\training_repo>git commit -m "made two changes"
+
+C:\Users\chris\Desktop\training_repo>git commit -m "made two changes"
+[master 7be6b08] made two changes
+ 3 files changed, 7 insertions(+), 1 deletion(-)
+ create mode 100644 check it in.txt
+ create mode 100644 present code
+
+21 How to make a new branch
+
+C:\Users\chris\Desktop\training_repo>git checkout -b still_learning
+NOTE:
+you have copy from your master Brach and branch of to a new branch called still_learning
+Switched to a new branch 'still_learning'
+NOTE: Any changes made on your new brach still_learning is not going to change on your master branch
+
+C:\Users\chris\Desktop\training_repo>git add .
+
+C:\Users\chris\Desktop\training_repo>git commit -m "first commit on new branch"
+On branch still_learning
+nothing to commit, working tree clean
+22. Now lets change to master branch to see if maste branch change
+
+C:\Users\chris\Desktop\training_repo>git checkout master
+Switched to branch 'master'
+23. add new file then 
+C:\Users\chris\Desktop\training_repo>git add .
+C:\Users\chris\Desktop\training_repo>git status
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   pygame.txt
+
+
+C:\Users\chris\Desktop\training_repo>git commit -m "added pygame"
+[master 371a296] added pygame
+ 1 file changed, 2 insertions(+)
+ create mode 100644 pygame.txt
+
+24. Merge new Branch with Master Branch
+C:\Users\chris\Desktop\training_repo>git merge master
+
+[master 371a296] added pygame
+ 1 file changed, 2 insertions(+)
+ create mode 100644 pygame.txt
+
+C:\Users\chris\Desktop\training_repo>git merge master
+Already up to date.
+
+25. lets change branhes again
+
+C:\Users\chris\Desktop\training_repo>git checkout master
+Already on 'master'
+26. to clear the screen
+C:\Users\chris\Desktop\training_repo>cls
+thenn  press   enter
+
+27. to go back
+C:\Users\chris\Desktop\training_repo>cd  ..
+
+
+How to set up remote repository in GITHUB
+
+1. Log on to Github
+2. Go to the Plus + sign on the top right corner of the page and click the drop down New Repository
+3. give a name.DO NOT Select readme.md since you are trying to merge to GIT and you have readme.md already
+4. Copy the code git remote add origin 
+https://github.com/coladimeji/training_repository.git
+5. go to command line
+6. copy https://github.com/coladimeji/training_repository.git
+7. paste on the Master
+C:\Users\chris\Desktop\training_repo>git remote add origin https://github.com/coladimeji/training_repository.git
+8. click enter
+NOTE: what we just did is we add remote. A remote is a url to another repository
+you can add as many remore as you want its called origin or upstream repository
+9. How to push changes to the repository
+first clear  your screen
+C:\Users\chris\Desktop\training_repo>cls
+thenn  press   enter
+10.   check out Master
+C:\Users\chris\Desktop\training_repo>git checkout  master
+
+Already on 'master'
+11.C:\Users\chris\Desktop\training_repo>git push  -u  origin master
+NOTE: what this is saying we push all our commit to origin remote repository to branch master
+we can push to another branch as well not only master
+
+C:\Users\chris\Desktop\training_repo>git push -u origin master
+info: please complete authentication in your browser...
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (14/14), 1.03 KiB | 87.00 KiB/s, done.
+Total 14 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/coladimeji/training_repository.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+12.Go back to github and refresh the page
+all entries  from    GITis   pasted on  GITHUB repository.
+
+
+
