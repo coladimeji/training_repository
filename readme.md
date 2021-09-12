@@ -1,5 +1,3 @@
 Hi
 
-hello everyone
-
-still learning
+helgitgit lo everyone
